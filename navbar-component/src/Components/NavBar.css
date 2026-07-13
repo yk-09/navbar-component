@@ -1,0 +1,58 @@
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 1rem;
+  background-color: whitesmoke;
+}
+
+.left-section{
+  display: flex;
+  justify-content: center;
+}
+
+/* .middle-section{
+  flex: 1;
+  max-width: 60%;
+} */
+
+.middle-section ul{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.middle-section ul li{
+  text-decoration: none;
+  list-style: none;
+  margin-top: 6px;
+}
+
+.middle-section ul li a{
+  text-decoration: none;
+  color: gray;
+}
+
+.right-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button{
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.learn{
+  background-color: white;
+}
+
+.price{
+  background-color: rgb(116, 60, 245);
+  color: white;
+}
