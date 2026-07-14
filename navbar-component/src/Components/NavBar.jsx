@@ -1,8 +1,10 @@
 import './NavBar.css';
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 export function NavBarDesktop(){
   return (
-    <nav className="navbar">
+    <nav className="navbar nav-desktop">
       <section className="left-section">
         <figure>
           <img src="../../public/img/abstractly.svg" alt="brand-icon" />
@@ -39,12 +41,56 @@ export function NavBarDesktop(){
   )
 }
 
-export function NavBarMobile(){
+export function NavBarMobile({setIsOn, isOn}){
+
+  function handleClick() {
+    setIsOn(!isOn);
+  }
+
   return (
-    <nav>
+    <nav className='navbar nav-mobile'>
       <figure>
         <img src="../../public/img/abstractly.svg" alt="brand-icon" />
       </figure>
+      <RxHamburgerMenu className='ham-icon' size={30} onClick={handleClick}/>
+    </nav>
+  )
+}
+
+export function NavigationMenu({isOn}) {
+  return (
+    <nav className={`nav-menu ${!isOn && 'slide-in'}`}>
+      <div>
+        <figure>
+          <img src="../../public/img/abstractly.svg" alt="Brand-icon" />
+        </figure>
+        <IoClose />
+      </div>
+      <ul className='nav-links'>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Features</a>
+        </li>
+        <li>
+          <a href="">Pricing</a>
+        </li>
+        <li>
+          <a href="">About us</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+      <div>
+        <button className='button learn'>
+          Learn More
+        </button>
+        <button className='button price'>
+          Try it out
+        </button>
+      </div>
     </nav>
   )
 }

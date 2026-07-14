@@ -1,9 +1,13 @@
 .navbar{
   display: flex;
-  justify-content: space-around;
   padding: 20px;
   font-size: 1rem;
   background-color: whitesmoke;
+}
+
+.nav-desktop{
+  justify-content: space-around;
+  display: none;
 }
 
 .left-section{
@@ -55,4 +59,39 @@
 .price{
   background-color: rgb(116, 60, 245);
   color: white;
+}
+
+.nav-mobile{
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+@media (min-width: 1028px) {
+  .nav-desktop{
+    display: flex;
+  }
+
+  .nav-mobile{
+    display: none;
+  }
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: grey;
+}
+
+.nav-menu{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  transition: translate 250ms ease-in-out;
+  background-color: red;
+}
+
+.slide-in{
+  background-color: red;
+  translate: -100%;
 }
