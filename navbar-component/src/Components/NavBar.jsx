@@ -1,11 +1,11 @@
 import './NavBar.css';
 
-export function NavBar(){
+export function NavBarDesktop(){
   return (
     <nav className="navbar">
       <section className="left-section">
         <figure>
-          <img src="../../public/img/abstractly.svg" alt="brand-icon" width={10} height={10} />
+          <img src="../../public/img/abstractly.svg" alt="brand-icon" />
         </figure>
       </section>
       <section className="middle-section">
@@ -35,6 +35,16 @@ export function NavBar(){
           See pricing
         </button>
       </section>
+    </nav>
+  )
+}
+
+export function NavBarMobile(){
+  return (
+    <nav>
+      <figure>
+        <img src="../../public/img/abstractly.svg" alt="brand-icon" />
+      </figure>
     </nav>
   )
 }
