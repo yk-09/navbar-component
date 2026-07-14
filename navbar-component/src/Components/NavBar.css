@@ -50,15 +50,31 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+.button:hover{
+  perspective: 100px;
+  transform: rotateY(2deg);
 }
 
 .learn{
   background-color: white;
+  transition: background-color 0.3s;
+}
+
+.learn:hover{
+  background-color: #ffffff6c;
 }
 
 .price{
   background-color: rgb(116, 60, 245);
   color: white;
+  
+}
+
+.price:hover{
+  background-color: rgb(156, 113, 255);
 }
 
 .nav-mobile{
@@ -90,7 +106,7 @@
   transition: translate 250ms ease-in-out;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: whitesmoke;
 }
 
 .slide-out{

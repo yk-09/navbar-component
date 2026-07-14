@@ -31,10 +31,14 @@ export function NavBarDesktop(){
       </section>
       <section className="right-section">
         <button className='button learn'>
-          Learn more
+          <span>
+            Learn More
+          </span>
         </button>
         <button className='button price'>
-          See pricing
+          <span>
+            See pricing
+          </span>
         </button>
       </section>
     </nav>
@@ -85,10 +89,14 @@ export function NavigationMenu({isOn, setIsOn}) {
       </ul>
       <div className='call-to-action'>
         <button className='button learn'>
-          Learn More
+          <span>
+            Learn More
+          </span>
         </button>
         <button className='button price'>
-          Try it out
+          <span>
+            Try it out
+          </span>
         </button>
       </div>
     </nav>
