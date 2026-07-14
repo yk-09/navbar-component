@@ -88,10 +88,35 @@
   right: 0px;
   left: 0px;
   transition: translate 250ms ease-in-out;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
 }
 
-.slide-in{
-  background-color: red;
+.slide-out{
   translate: -100%;
+}
+
+.top-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-links{
+  flex: 1;
+  padding: 10px;
+}
+
+.nav-links li{
+  padding: 10px;
+}
+
+.call-to-action{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  row-gap: 10px;
 }

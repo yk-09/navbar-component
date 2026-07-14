@@ -44,7 +44,7 @@ export function NavBarDesktop(){
 export function NavBarMobile({setIsOn, isOn}){
 
   function handleClick() {
-    setIsOn(!isOn);
+    setIsOn(true);
   }
 
   return (
@@ -57,14 +57,14 @@ export function NavBarMobile({setIsOn, isOn}){
   )
 }
 
-export function NavigationMenu({isOn}) {
+export function NavigationMenu({isOn, setIsOn}) {
   return (
-    <nav className={`nav-menu ${!isOn && 'slide-in'}`}>
-      <div>
+    <nav className={`nav-menu ${!isOn && 'slide-out'}`}>
+      <div className='top-section'>
         <figure>
           <img src="../../public/img/abstractly.svg" alt="Brand-icon" />
         </figure>
-        <IoClose />
+        <IoClose onClick={() => {setIsOn(false)}}/>
       </div>
       <ul className='nav-links'>
         <li>
@@ -83,7 +83,7 @@ export function NavigationMenu({isOn}) {
           <a href="">Contact</a>
         </li>
       </ul>
-      <div>
+      <div className='call-to-action'>
         <button className='button learn'>
           Learn More
         </button>

@@ -10,7 +10,7 @@ function App (){
     <>
       <NavBarDesktop />
       <NavBarMobile setIsOn={setIsOn} isOn={isOn} />
-      <NavigationMenu isOn={isOn}/>
+      <NavigationMenu isOn={isOn} setIsOn={setIsOn}/>
     </>
   )
 }
